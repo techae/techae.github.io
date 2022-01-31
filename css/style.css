@@ -108,7 +108,7 @@ a:focus {
 
 .header_section .header_top {
   padding: 15px 0;
-  background-color: #476269;
+  background-color: #02075d;
 }
 
 .header_section .header_top .contact_nav {
@@ -149,7 +149,7 @@ a:focus {
 }
 
 .header_section .header_top .contact_nav a:hover i {
-  color: #476269;
+  color: #02075d;
 }
 
 .header_section .header_bottom {
@@ -337,7 +337,7 @@ a:focus {
 }
 
 .slider_section .detail-box {
-  color: #476269;
+  color: #02075d;
   text-align: center;
 }
 
@@ -487,7 +487,7 @@ a:focus {
 }
 
 .service_section .box .detail-box a {
-  color: #476269;
+  color: #02075d;
   font-weight: 600;
 }
 
@@ -524,7 +524,7 @@ a:focus {
   right: 0;
   width: calc(100% - 45px);
   height: 450px;
-  background-color: #476269;
+  background-color: #02075d;
   z-index: 1;
   opacity: 0.45;
 }
@@ -639,7 +639,7 @@ a:focus {
 .why_us_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #476269;
+  background-color: #02075d;
   color: #ffffff;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
@@ -717,7 +717,7 @@ a:focus {
 
 .client_section .box .img-box img {
   border-radius: 100%;
-  border: 5px solid #476269;
+  border: 5px solid #02075d;
 }
 
 .client_section .box .detail-box p {
@@ -725,7 +725,7 @@ a:focus {
 }
 
 .client_section .box .detail-box i {
-  color: #476269;
+  color: #02075d;
   margin-bottom: 10px;
 }
 
@@ -753,7 +753,7 @@ a:focus {
 
 .client_section .owl-carousel .owl-nav .owl-prev:hover,
 .client_section .owl-carousel .owl-nav .owl-next:hover {
-  background-color: #476269;
+  background-color: #02075d;
 }
 
 /* client section end */
@@ -787,19 +787,19 @@ a:focus {
 }
 
 .contact_section .form_container input::-webkit-input-placeholder {
-  color: #476269;
+  color: #02075d;
 }
 
 .contact_section .form_container input:-ms-input-placeholder {
-  color: #476269;
+  color: #02075d;
 }
 
 .contact_section .form_container input::-ms-input-placeholder {
-  color: #476269;
+  color: #02075d;
 }
 
 .contact_section .form_container input::placeholder {
-  color: #476269;
+  color: #02075d;
 }
 
 .contact_section .form_container input.message-box {
@@ -850,7 +850,7 @@ a:focus {
 }
 
 .info_section {
-  background-color: #476269;
+  background-color: #02075d;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }
@@ -997,7 +997,7 @@ a:focus {
 }
 
 .footer_section p {
-  color: #476269;
+  color: #02315d;
   padding: 25px 0;
   margin: 0;
 }
