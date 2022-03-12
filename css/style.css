@@ -2,7 +2,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-  background-color: #0a77f3;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .heading_container h2 span {
-  color: #ffffff;
+  color: #5bc0de;
 }
 
 .heading_container p {
