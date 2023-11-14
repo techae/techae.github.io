@@ -31,6 +31,8 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
         var isNS = (navigator.appName == "PN") ? 1 : 0;
         if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
@@ -629,15 +631,15 @@
                         <div class="rotate-text">
                             <span>Get A Free Quote</span>
                         </div>
-                        <form method="post" class="contact-validation-active" id="contact-form">
+                        <form method="" class="contact-validation-active" id="submit-form">
                             <div>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name *">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name *" required >
                             </div>
                             <div>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email *">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email *" required >
                             </div>
                             <div>
-                                <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject *">
+                                <input type="number" name="number" id="subject" class="form-control" placeholder="Phone Number *" required >
                             </div>
                             <div>
                                 <textarea class="form-control" name="note"  id="note" placeholder="Message..."></textarea>
@@ -655,6 +657,26 @@
                         </form>
                     </div>
                 </div>
+
+                <script>
+                    $("#submit-form").submit((e)=>{
+                    e.preventDefault()
+                    $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbwzY8haUxpAL6VltmeqHx3857dRSOcs3xjcrVSAARdyjj9R_yi3eleBU3CE_VzAsztyVQ/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                    alert("Your message has been sent. Thank you!")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                    alert("Something Error")
+                    
+                    }
+                    })
+                    })
+                    </script>
                 <div class="right-col">
                     <div class="contact-info">
                         <ul>
