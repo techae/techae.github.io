@@ -32,8 +32,7 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
     var isNS = (navigator.appName == "PN") ? 1 : 0;
@@ -149,7 +148,7 @@
                                 </ul>
                             </li>
                            
-                            <li class="menu-item-has-children">
+                            <li class="menu-item-has-children active">
                                 <a href="#">Brands</a>
                                 <ul class="sub-menu">
                                     <li><a href="electronics-b.html">Electronics</a></li>
@@ -166,7 +165,7 @@
                                 </ul>
                             </li>
                             
-                            <li class="active">
+                            <li >
                                 <a href="contact.html">Contact</a>
                                 
                             </li>
@@ -191,10 +190,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <h2>Contact</h2>
+                        <h2>Robotics</h2>
                         <ol class="breadcrumb">
                             <li><a href="indexut.html">Home</a></li>
-                            <li>Contact</li>
+                            <li>Robotics</li>
                         </ol>
                     </div>
                 </div> <!-- end row -->
@@ -203,155 +202,148 @@
         <!-- end page-title -->
 
 
-        <!-- start contact-pg-section -->
-        <section class="contact-pg-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="section-title-s2">
-                            <span>Our contact info</span>
-                            <h2>Contact with us</h2>
-                        </div>
+        
+       
+       <!-- start contact-pg-section -->
+       <section class="contact-pg-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="section-title-s2">
+                        <span>LOOKING FOR PRODUCTS?</span>
+                        <h2> SEND US YOUR REQUEST</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-6">
+                    <div class="contact-form">
+                        <form method="" class="contact-validation-active" id="submit-form">
+                            <div class="half-col">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required >
+                            </div>
+                            <div class="half-col">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required >
+                            </div>
+                            <div class="half-col">
+                                <input type="number" name="phone" id="phone" class="form-control" placeholder="Your Phone" required >
+                            </div>
+                            <div class="half-col">
+                                <input type="text" name="brands" id="brands" class="form-control" placeholder="Brands" required >
+                            </div>
+                            <div class="full-col">
+                                <input type="text" name="address" id="address" class="form-control" placeholder="Address" required >
+                            </div>
+                            <div>
+                                <textarea class="form-control" name="note"  id="note" placeholder="Description..." required ></textarea>
+                            </div>
+                            <div class="submit-btn-wrapper">
+                                <button type="submit" class="theme-btn-s3">Submit</button>
+                                <div id="loader">
+                                    <i class="ti-reload"></i>
+                                </div>
+                            </div>
+                            <div class="clearfix error-handling-messages">
+                                <div id="success">Thank you</div>
+                                <div id="error"> Error occurred while sending email. Please try again later. </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col col-lg-6">
-                        <div class="contact-form">
-                            <form method="" class="contact-validation-active" id="submit-form">
-                                <div class="half-col">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required >
-                                </div>
-                                <div class="half-col">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required >
-                                </div>
-                                <div class="half-col">
-                                    <input type="number" name="phone" id="phone" class="form-control" placeholder="Your Phone" required >
-                                </div>
-                                <div class="half-col">
-                                    <input type="text" name="address" id="address" class="form-control" placeholder="Address" required >
-                                </div>
-                                <div>
-                                    <textarea class="form-control" name="note"  id="note" placeholder="Description..." required ></textarea>
-                                </div>
-                                <div class="submit-btn-wrapper">
-                                    <button type="submit" class="theme-btn-s3">Submit</button>
-                                    <div id="loader">
-                                        <i class="ti-reload"></i>
-                                    </div>
-                                </div>
-                                <div class="clearfix error-handling-messages">
-                                    <div id="success">Thank you</div>
-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                <script>
+                    $("#submit-form").submit((e)=>{
+                    e.preventDefault()
+                    $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbwzY8haUxpAL6VltmeqHx3857dRSOcs3xjcrVSAARdyjj9R_yi3eleBU3CE_VzAsztyVQ/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                    alert("Your message has been sent. Thank you!")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                    alert("Something Error")
+                    
+                    }
+                    })
+                    })
+                    </script>
 
-                    <script>
-                        $("#submit-form").submit((e)=>{
-                        e.preventDefault()
-                        $.ajax({
-                        url:"https://script.google.com/macros/s/AKfycbwzY8haUxpAL6VltmeqHx3857dRSOcs3xjcrVSAARdyjj9R_yi3eleBU3CE_VzAsztyVQ/exec",
-                        data:$("#submit-form").serialize(),
-                        method:"post",
-                        success:function (response){
-                        alert("Your message has been sent. Thank you!")
-                        window.location.reload()
-                        //window.location.href="https://google.com"
-                        },
-                        error:function (err){
-                        alert("Something Error")
-                        
-                        }
-                        })
-                        })
-                        </script>
-
-                    <div class="col col-lg-6">
-                        <div class="info-box-outer">
-                            <div class="info-box">
-                                <div class="grid">
-                                    <h3>Address</h3>
-                                    <p> P.O.BOX : 116164
-                                        Warehouse Q4-160
-                                        International Airport Freezone
-                                        Sharjah, UAE</p>
-                                </div>
-                                <div class="grid">
-                                    <h3>Phone</h3>
-                                    <p> +971 6 52 66887
-                                        , &nbsp; +971 56 95 17976</p>
-                                </div>
-                                <div class="grid">
+                <div class="col col-lg-6">
+                    <div class="info-box-outer">
+                        <div class="info-box">
+                            <div class="grid">
+                               <img src="assets/img/ut/robotics-b.JPG">
+                            </div>
+                            <div class="grid">
+                                <h3>Phone</h3>
+                                <p> +971 6 52 66887
+                                    , &nbsp; +971 56 95 17976</p>
                                     <h3>Email</h3>
                                     <p>sales@ultimate-technical.com
                                         
                                        , &nbsp;<br> info@ultimate-technical.com</p>
-                                </div>
-                                <div class="grid">
-                                    <ul class="social">
-                                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                        <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                        <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="ti-youtube"></i></a></li>
-                                        <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14425.49828926403!2d55.494823!3d25.3252089!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f54e4d5c6f8b%3A0x5c35bc20d45a2ff9!2sUltimate%20Technical!5e0!3m2!1sen!2sae!4v1700063768732!5m2!1sen!2sae" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end contact-pg-section -->
-
-
-        <!-- stat cta-s2-section -->
-        <section class="cta-s2-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-sm-9">
-                        <h3>If you need any Query, Feel Free, please </h3>
-                    </div>
-                    <div class="col col-sm-3">
-                        <div class="contact-btn">
-                            <a href="#" class="theme-btn-s4">Contact With Us</a>
+                          
+                        
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- end cta-s2-section -->
 
+          
+        </div> <!-- end container -->
+    </section>
+    <!-- end contact-pg-section -->
 
-        <!-- start newsletter-section -->
-        <section class="newsletter-section">
-            <h2 class="hidden">Newsletter</h2>
+        
+
+        <!-- start partners-section -->
+        <section class="partners-section">
+            <h2 class="hidden">Partners</h2>
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <div class="newsletter">
-                            <div class="newsletter-form">
-                                <form>
-                                    <input type="text" class="form-control" placeholder="Subscrib Newsletter (Enter Email Address)">
-                                    <button type="submit"><i class="ti-email"></i></button>
-                                </form>
+                        <div class="partner-grids partners-slider">
+                            <div class="grid">
+                                <img src="assets/img/brands/basler-200x113.png" alt>
                             </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/Bourdon-Baumer-200x113.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/Det-Tronics-200x113.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/dwyer-200x113.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/eaton-200x113.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/Elster-200x113.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/emerson-200x113.png" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/fluke-200x113.jpg" alt>
+                            </div>
+                            <div class="grid">
+                                <img src="assets/img/brands/hbm-200x113.jpg" alt>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div> <!-- end container -->
         </section>
-        <!-- end newsletter-section -->
+        <!-- end partners-section -->
+
 
 
         <!-- start site-footer -->
